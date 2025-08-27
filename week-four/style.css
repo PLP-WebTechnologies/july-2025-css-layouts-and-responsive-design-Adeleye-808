@@ -1,0 +1,78 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header, footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+nav {
+  background: #555;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Flexbox used for nav alignment */
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  nav li {
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  header, footer {
+    font-size: 0.9rem;
+  }
+  
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  main {
+    padding: 0.5rem;
+  }
+}
